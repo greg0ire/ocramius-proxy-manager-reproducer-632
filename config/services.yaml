@@ -29,3 +29,14 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+    #
+    PhpAmqpLib\Connection\AMQPStreamConnection:
+        public: true
+        lazy: true
+        class: PhpAmqpLib\Connection\AMQPStreamConnection
+        arguments:
+            - "whatever"
+            - "1234"
+            - "floats"
+            - "your"
+            - "boat"
